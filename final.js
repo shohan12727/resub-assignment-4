@@ -52,9 +52,11 @@ function electionResult(votes) {
     for (let vote of votes) {
         if (typeof vote === 'string') {
             let lowerVote = vote.toLowerCase();
+
             if (lowerVote === "mango") {
                 mangoCount++;
             } else if (lowerVote === "banana") {
+
                 bananaCount++;
             }
         }
@@ -65,8 +67,10 @@ function electionResult(votes) {
     if (mangoCount > bananaCount) {
         return "Mango";
     } else if (bananaCount > mangoCount) {
+
         return "Banana";
     } else {
+
         return "Draw";
     }
 }
@@ -83,8 +87,8 @@ function isBestFriend(f1, f2) {
     if (
         typeof f1 !== 'object' || typeof f2 !== 'object' || 
         f1 === null || f2 === null ||
-        !('name' in f1 && 'roll' in f1 && 'bestFriend' in f1) ||
-        !('name' in f2 && 'roll' in f2 && 'bestFriend' in f2)
+ !('name' in f1 && 'roll' in f1 && 'bestFriend' in f1) ||
+     !('name' in f2 && 'roll' in f2 && 'bestFriend' in f2)
     ) {
         return "Invalid";
     }
@@ -118,4 +122,6 @@ function calculateWatchTime(times) {
     
     return { hour, minute, second };
 }
+
+
 
